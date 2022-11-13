@@ -1,0 +1,55 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+section{
+    width: 80%;
+    min-height: 500px;
+    margin: 100px auto;
+}
+header{
+    background-color: beige;
+    border: 1px solid black;
+    height: 5%;
+}
+header span{
+    width: 33%;
+    display: inline-block;
+    font-size: 20px;
+}
+header .user_name{
+    text-align: center;
+}
+header .logout{
+    text-align: right;
+}
+.content{
+    font-weight: bold;
+}
+.message{
+    width: 80%;
+    display: block;
+}
+input[type=submit], button{
+    width: 150px;
+    margin-top: 5px;
+    margin-left: 65%;
+    padding: 5px;
+    color: white;
+}
+form input[type=submit]{
+    background-color: blue;
+ }
+.message_block, form{
+    margin-left: 10%;
+    padding: 5px;
+}
+.submit_comment{
+    background-color: green;
+ }
+ .comment_block p{
+    margin-left: 5%;
+}
+.hidden{
+    display: none;
+}
