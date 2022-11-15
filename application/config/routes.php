@@ -55,8 +55,8 @@ $route['register'] = 'users/create_user';
 $route['signin'] = 'users/signin';
 $route['post_message'] = 'messages/create_message';
 $route['post_comment'] = 'messages/create_comment';
-$route['delete_comment/(:any)'] = 'messages/delete_comment/$1';
-$route['delete_message/(:any)'] = 'messages/delete_message/$1';
+$route['delete_comment'] = 'messages/delete_comment/';
+$route['delete_message'] = 'messages/delete_message/';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

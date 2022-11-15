@@ -1,6 +1,7 @@
 <?php 
 
 class User extends CI_Model{
+    
     public function validate_register(){
         $result = array("status" => "false", "data" => "", "message" => "");
 
