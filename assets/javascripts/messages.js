@@ -23,11 +23,16 @@ $(document).ready(function(){
 
     $(document).on("click", "a", function(){
         let form = $(this);
+        let delete_form = $("#" + form.attr("data-attr-form"));
 
-        $.get($(this).attr("href"), function(data){
+        delete_form.children(".delete_id").val($(this).attr("data-attr-id"));
+
+        $.post(delete_form.attr("action"), delete_form.serialize(), function(data){
            
             if(data.status == true){
                 form.parent().parent().remove();
+                $(".csrf").val(data.csrf);
+                $(".delete_id").val("");
                 alert("deleted");
             }
         }, 'json');

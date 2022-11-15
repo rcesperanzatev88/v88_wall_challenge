@@ -42,15 +42,22 @@ class Messages extends CI_Controller{
         echo json_encode($result);
     }
 
-    public function delete_message($id){
+    public function delete_message(){
+        $post_data = $this->input->post(NULL, TRUE);
     
-        $result = $this->message->delete_message($id);
+        $result = $this->message->delete_message($post_data["id"]);
+        $result["csrf"] = $this->security->get_csrf_hash();
+
         echo json_encode($result);
     }
 
-    public function delete_comment($id){
+    public function delete_comment(){
+
+        $post_data = $this->input->post(NULL, TRUE);
     
-        $result = $this->message->delete_comment($id);
+        $result = $this->message->delete_comment($post_data["id"]);
+        $result["csrf"] = $this->security->get_csrf_hash();
+
         echo json_encode($result);
     }
 }

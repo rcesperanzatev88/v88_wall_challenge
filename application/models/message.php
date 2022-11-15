@@ -150,6 +150,7 @@ class Message extends CI_Model{
 
       #DOCU function to delete comment
       public function delete_comment($id){
+       
         $result = array("status" => "false", "data" => "", "message" => "");
 
         $query = " DELETE FROM comments WHERE comments.id = ? and user_id = ?";
