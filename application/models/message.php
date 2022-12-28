@@ -109,38 +109,6 @@ class Message extends CI_Model{
         return $result;
     }
 
-    public function fetch_message($id){
-
-        $result = array("status" => "false", "data" => "", "message" => "");
-
-        $query = "  SELECT messages.id, CONCAT(users.first_name, ' ', users.last_name) as creator, message, DATE_FORMAT(messages.created_at, '%M %d %Y %h %i %p') as created_at, users.id as  message_user_id
-                    FROM messages
-                    LEFT JOIN users on users.id = messages.id
-                    WHERE messages.id = ? ";
-
-        $result["data"] = $this->db->query($query, array($id))->row_array();
-        $result["status"] = TRUE;
-
-        return $result;
-
-    }
-
-    public function fetch_comment($id){
-
-        $result = array("status" => "false", "data" => "", "message" => "");
-
-        $query = "  SELECT comments.id, CONCAT(users.first_name, ' ', users.last_name) as creator, comment, DATE_FORMAT(comments.created_at, '%M %d %Y %h %i %p') as created_at, users.id as  messages_user_id
-                    FROM comments
-                    LEFT JOIN users on users.id = comments.id
-                    WHERE comments.id = ? ";
-
-        $result["data"] = $this->db->query($query, array($id))->row_array();
-        $result["status"] = TRUE;
-
-        return $result;
-
-    }
-
     public function delete_message($id){
         $result = array("status" => "false", "data" => "", "message" => "");
 
@@ -151,7 +119,6 @@ class Message extends CI_Model{
         return $result;
 
     }
-
 
     public function delete_comment($id){
         $result = array("status" => "false", "data" => "", "message" => "");

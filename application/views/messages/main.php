@@ -10,7 +10,7 @@
             <span> THE WALL</span><span class = "user_name"><?= $this->user_login["first_name"] ?></span><span class ="logout">Logout</span>
         </header>
         <section>
-            <form action = "post_message" method = "post">
+            <form id = "form_message" action = "post_message" method = "post">
                 <div class = "error"></div>
                 <h2>Message</h2>
                 <textarea class = "message" name = "message"></textarea>

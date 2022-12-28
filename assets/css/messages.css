@@ -37,7 +37,7 @@ input[type=submit], button{
     padding: 5px;
     color: white;
 }
-form input[type=submit]{
+#form_message input[type=submit]{
     background-color: blue;
  }
 .message_block, form{
